@@ -39,7 +39,7 @@ const authStorage = "auth-key";
 
 export default function AuthProvider({ children }: PropsWithChildren) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isReading, setIsReading] = useState(false);
+  const [isReading, setIsReading] = useState<boolean>(false);
   const [user, setUser] = useState<User | null>(null);
 
   const router = useRouter();

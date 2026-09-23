@@ -1,9 +1,14 @@
 import { Redirect, Tabs } from "expo-router";
+import { useContext } from "react";
+import { AuthContext } from "../utils/authContext";
 
 
 
 export default function DashLayout(){
-    const logado = false;
-    if(!logado) return <Redirect href={"/login"} />
-    return <Tabs />
+
+    const auth = useContext(AuthContext);
+    if(!auth.isReading) return null
+    if(!auth.isLoggedIn) return <Redirect href={"/login"} />
+    
+    return (<Tabs />)
 }
