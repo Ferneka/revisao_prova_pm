@@ -1,0 +1,73 @@
+nome pasta projeto: prova_2ams_nome-sobrenome
+[api, <app-2s>]
+nome app: <app-2s>
+nome banco:
+porta api
+
+##
+src/
+    api/
+        apiConfig.ts
+        apiAuth.ts
+        apiUsers.ts
+
+    components/
+        <ButtonFatec.tsx>(ButtonFatec)
+        <LogoApp.tsx>(LogoApp)
+    app/
+        (auth)/
+                |(cadastros)/
+                            |_layout.tsx(CadastroLayout) / Drawer
+                            |<tela-do-tema>[clientes, fornecedores, estados, cidades ]
+                            |<tela-do-usuario>
+                            |<tela-de-roles>   
+                            |...
+                |_layout.tsx(DashLayout) / Tab
+                <index.tsx> (Home)
+                <perfil.tsx> (PerfilUser)
+                <(cadastros)>[Menu Drawer] 
+                <sair> (SairApp)
+        utils/
+            <authContext.tsx>(AuthContext) **trazer inteiro
+    |_layout.tsx(RootLayout)
+    <login.tsx>(Login)
+    <register.tsx>(Register)
+
+
+## numero de telas minimas
+login
+register
+dashboard
+perfil
+sair
+
+## na cola
+
+
+codigo completo do authcontext
+
+css das paginas
+
+componentes criados proprios 
+
+
+
+1 - comando para gerar o projeto 
+npx create-expo-app@latest
+
+editar o nome que ele pedir na prova
+
+--entrar na pasta
+cd my-prova
+
+--executar o programa
+
+--tira as configurações do projeto
+npm run reset-project
+
+
+
+-mudar index para login hahaha
+
+--instalar async storage: 
+npx expo install @react-native-async-storage/async-storage
